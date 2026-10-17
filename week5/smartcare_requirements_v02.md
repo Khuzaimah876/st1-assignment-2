@@ -37,16 +37,16 @@ Fr-07: System needs to provide the practitioner with their daily and weekly appo
 
 Fr-08: System needs to allow staff to record and update bookings consistently, progressing in different stages (e.g, Booked, cancelled, completed)
 
-Fr-09: System needs to allow management to view reports on appointment bookings.  
+Fr-09: System needs to allow management to view reports on appointment bookings.  #changed: management to view appointment bookings. 
 
 Fr-10: System needs to store patient consultation history to prevent lost information 
 
 Fr-11: System needs to allow patients to filter appointments based on time, date and practitioner or booking status. 
 
-Fr-12: System needs to be able to restrict patient data for privacy purposes based on roles, so health records can only be viewed by practitioners, not receptionist, management or any other patient. 
+Fr-12: System needs to be able to restrict or lock patient data for privacy purposes based on roles, so health records can only be viewed by practitioners, not receptionist, management or any other patient. 
 
 # Non functional requirements
-NFR-01: System code must be easy and simple to understand and read, so regular updates and patch fixes can be released and made by smaller teams. 
+NFR-01: System code must be clear and conscise, so regular updates and patch fixes can be released and made by smaller teams. 
 
 NFR-02: System shall allow the staff members to view the patient records and appointment bookings within 2 to 3 seconds.
 
@@ -73,17 +73,23 @@ US-06: As a receptionist, I want to update or cancel an appointment and keep a p
 
 
 # Acceptance Criteria
-#Given
-#When
-#Then
 
-#Given
-#When
-#Then
 
-#Given
-#When
-#Then
+| Acceptance criteria                                        | Given                                                                                                     | When                                                               | Then                                                                                                                       |
+|:-----------------------------------------------------------|:----------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| Patient search                                             | Given patient history exists in the system                                                                | When any staff member searches for the name in the system using id | System must display the correct information                                                                                |
+| Create an appointment                                      | Given patient record exists and a practitioner is available                                               | When a recpetionist or any staff member clicks create appointment  | Appointment and booking details must be succesfully logged and stored in the system                                        |
+| Practitioner availability                                  | Given current logged availability of the practitioner                                                     | When viewed by a receptionist, staff member or practitioner        | System must display all availalble appointment and booking times                                                           |
+| Cancel appointment                                         | Given that a currect existing booking exists for this patient                                             | When a recpetionist cancels a booking                              | Then the booking status for appointment should change to cancelled in system and the record should be kept in the history. |     
+| Prevent double booking <br/>(negative or failing scenario) | Given the practitioner is booked for a specific time slot                                                 | When a receptionist or staff member tries to book within that time slot | Then the system should display an error message and reject the request of the staff member to double book.                 |
+
+# Part g) Verify the ai Review
+
+| AI suggestion                                                          | Evidence?                                                                                                                                            | Decision   | Reason                                      | Verification                                                |
+|:-----------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------|:-----------|:--------------------------------------------|:------------------------------------------------------------|
+| Make the appointment statuses clearer (FR-08)                          | Mentioned in the assignment 2 sheet  "inconsistent appointment status information", the clinic already has messy and inconsistent status information | Modified   | FR-08 was vague ("e.g.")                    | Rewrote FR-08 with 3 statuses: Booked, Cancelled, Completed |
+| Make the reports clear (FR-09)                                         | Ai said the word "report" was unclear                                                                                                                | Modified   | The word report was vague and was confusing | removed modified word                                       |
+| Keep cancelled bookings in a backup, don't remove them  or delete them | Yes, mentioned in the assignment 2 sheet "lack of reliable appointment history"                                                                      | Accepted   | Matches the case in the assignment 2 sheet  |covered by FR-06                                    |
 
 
 

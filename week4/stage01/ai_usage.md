@@ -56,3 +56,20 @@ def add_appointment(patient_name, practitioner_name, appointment_time):
 add_appointment("Alice Smith", "Dr. John Doe", "2024-07-20 10:00 AM")
 
 print(appointments)
+
+
+#for part G) An issue in the code is the double booking so using AI to fix as part c ai is on,
+
+def book_appointment(patient_name, practitioner_name, appointment_time):
+    if not patient_name:
+        raise ValueError("Patient name cannot be empty")
+    for existing in appointments:
+        if existing["practitioner"] == practitioner_name and existing["time"] == appointment_time:
+            raise ValueError("This practitioner is already booked at that time")
+    appointment = {
+        "patient": patient_name,
+        "practitioner": practitioner_name,
+        "time": appointment_time
+    }
+    appointments.append(appointment)
+
