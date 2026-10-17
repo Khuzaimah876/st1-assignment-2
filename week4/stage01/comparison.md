@@ -11,18 +11,17 @@ From the human code there are a few limitations that can be seen. For example,
 
 ### Comparison
 
-Question:      
- 
+| Question           | Human version     | AI Version                                   |
+|:-------------------|:------------------|:---------------------------------------------|
+| Easy to understand | Book appointments | Brief states staff report duplicate bookings |
+|Runs successfully? | 
+| Uses only required features | 
+| Adds Assumptions | 
+| Handles errors? | 
+| Could i explain it?  | 
 
 
 
+### Verification
 
 
-
-Question   Human Version	AI Version
-Easy to understand?	Yes	Yes
-Runs successfully?	Yes	Yes
-Uses only required features?	Yes	Yes
-Adds assumptions?	No	No
-Handles errors?	Better	Worse
-Could I explain it?	Yes	Yes
