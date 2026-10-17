@@ -94,7 +94,7 @@ Appointment: def __init__(self, appointment_id, patient, practitioner, date_time
         self.status = "Booked"
 
 ### H) 
-Every class and attribute and method in the UML above appears in the code with the same name, and the code doesn't add anything extra that isn't mentioned in the UML. 
+some classes and attributes in the UML above appears in the code with the same name.
 
 
 
